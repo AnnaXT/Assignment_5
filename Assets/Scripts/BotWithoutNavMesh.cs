@@ -6,6 +6,7 @@ public class BotWithoutNavMesh : MonoBehaviour
 {
     Rigidbody _rigidbody;
     private GameObject player;
+    public float speed = 0.002f;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -16,7 +17,7 @@ public class BotWithoutNavMesh : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform);
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 0.002f);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed);
         
     }
 }
