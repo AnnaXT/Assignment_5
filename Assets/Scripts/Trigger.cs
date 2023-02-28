@@ -11,6 +11,7 @@ public class Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other){
         
         if(other.gameObject.CompareTag(tagName)){
+            other.GetComponent<PlayerHealth>().ChangeLifeVal(1);
             OnTriggerEnterEvent?.Invoke();
             Destroy(gameObject);
             
