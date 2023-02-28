@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     //public TextMeshProUGUI scoreUI;
     public TextMeshProUGUI livesUI;
+    public string levelName = "End Screen";
 
     
     private void Start()
@@ -23,6 +25,9 @@ public class PlayerHealth : MonoBehaviour
     private void Update(){
         //scoreUI.text = "SCORE: " + score;
         livesUI.text = lifeVal + " Coins";
+        if (lifeVal <=0 ){
+            SceneManager.LoadScene(levelName);
+        }
     }
 
     //public void AddScore(int points){
