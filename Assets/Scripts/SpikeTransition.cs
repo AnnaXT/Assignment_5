@@ -16,6 +16,7 @@ public class SpikeTransition : MonoBehaviour
 
         if (other.CompareTag("Player")){
             myAnimator.Play("Open Trap");
+            other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
         }
         
 
