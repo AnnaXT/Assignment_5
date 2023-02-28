@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     NavMeshAgent _newNavMeshAgent;
     Camera mainCam;
+    public float invincibleTime = 3;
+    private bool invincible = false;
 
     void Start()
     {
@@ -26,8 +28,10 @@ public class Player : MonoBehaviour
                 _newNavMeshAgent.destination = hit.point;
             }
         }
+        
     }
 
+    
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.CompareTag("Key"))
