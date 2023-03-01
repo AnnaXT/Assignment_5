@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
 {
     NavMeshAgent _newNavMeshAgent;
     Camera mainCam;
+    Animator animator;
 
     void Start()
     {
         _newNavMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         mainCam = Camera.main;
     }
 
@@ -29,13 +31,9 @@ public class Player : MonoBehaviour
     }
 
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Key"))
-    //    {
-    //        int keyNum = Int32.Parse(other.name.Substring(3)); // all key must be named "Key" andm numner "Key0"
-    //        Destroy(other.gameObject);
-    //        PublicVars.hasKey[keyNum] = true;
-    //    }
+    public void AttackAnimation()
+    {
+        animator.SetBool("Attack", true);
+    }
 }
 
