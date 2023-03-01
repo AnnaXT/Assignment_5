@@ -16,11 +16,12 @@ public class CameraController : MonoBehaviour
         animator = GetComponent<Animator>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
-    private void LateUpdate()
-    {
-        //if (!frontView)
-          //transform.position = player.transform.position + offset;
-    }
+
+    //private void LateUpdate()
+    //{
+    //    //if (!frontView)
+    //      //transform.position = player.transform.position + offset;
+    //}
 
     private void Update()
     {
@@ -34,16 +35,18 @@ public class CameraController : MonoBehaviour
 
     private void FrontViewAnimation()
     {
-        WaitForPlayerToStop();
+        StartCoroutine(WaitForPlayerToStop());
         _gameManager.SetPlayerControllerActive(false);
         animator.SetBool("FrontView", true);
-        WaitForAnimationToFinish();
+        StartCoroutine(WaitForAnimationToFinish());
+        _gameManager.DirectPlayerTowards(transform);
+
     }
 
     private void TopViewAnimation()
     {
         animator.SetBool("TopView", true);
-        WaitForAnimationToFinish();
+        StartCoroutine(WaitForAnimationToFinish());
         _gameManager.SetPlayerControllerActive(true);
     }
 

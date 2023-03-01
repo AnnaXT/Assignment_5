@@ -42,4 +42,12 @@ public class GameManager : MonoBehaviour
     {
         return _navMeshAgent.velocity.magnitude > 0;
     }
+
+    public void DirectPlayerTowards(Transform targetPosition)
+    {
+        Vector3 direction = targetPosition.position - player.transform.position;
+        player.transform.rotation = Quaternion.LookRotation(direction);
+    }
+
+
 }
