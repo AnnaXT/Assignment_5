@@ -29,15 +29,15 @@ public class TestPlayer : MonoBehaviour
     }
 
 
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //    if (other.CompareTag("Key"))
-    //    {
-    //        int keyNum = Int32.Parse(other.name.Substring(3)); // all key must be named "Key" andm numner "Key0"
-    //        Destroy(other.gameObject);
-    //        PublicVars.hasKey[keyNum] = true;
-    //    }
-    // }
+    private void OnTriggerEnter(Collider other)
+    {
+       if (other.CompareTag("Key0"))
+       {
+           //int keyNum = Int32.Parse(other.name.Substring(3)); // all key must be named "Key" andm numner "Key0"
+           Destroy(other.gameObject);
+           PublicVars.hasKey = true;
+       }
+    }
 
 }
 
