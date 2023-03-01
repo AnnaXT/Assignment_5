@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
-public class Player : MonoBehaviour
+public class TestPlayer : MonoBehaviour
 {
     NavMeshAgent _newNavMeshAgent;
     Camera mainCam;
@@ -37,5 +37,7 @@ public class Player : MonoBehaviour
     //        Destroy(other.gameObject);
     //        PublicVars.hasKey[keyNum] = true;
     //    }
+    // }
+
 }
 
