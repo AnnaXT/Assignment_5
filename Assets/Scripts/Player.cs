@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
     }
 
 
-    // private void OnTriggerEnter(Collider other)
-    // {
+    //private void OnTriggerEnter(Collider other)
+    //{
     //    if (other.CompareTag("Key"))
     //    {
     //        int keyNum = Int32.Parse(other.name.Substring(3)); // all key must be named "Key" andm numner "Key0"
