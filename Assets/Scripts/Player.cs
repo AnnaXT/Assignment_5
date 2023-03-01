@@ -7,12 +7,16 @@ using System;
 public class Player : MonoBehaviour
 {
     NavMeshAgent _newNavMeshAgent;
+    GameManager _gameManager;
     Camera mainCam;
     Animator animator;
+
+    public string nextScene;
 
     void Start()
     {
         _newNavMeshAgent = GetComponent<NavMeshAgent>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
         animator = GetComponent<Animator>();
         mainCam = Camera.main;
     }
@@ -30,6 +34,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Portal"))
+        {
+            if (_gameManager.keyStatus == true)
+            {
+                Destroy(other.gameObject);
+                _gameManager.LoadScene(nextScene);
+            }
+            else
+            {
+                _gameManager.DisplayKeyNotObtainedError();
+            }
+
+        }
+    }
 
     public void AttackAnimation()
     {
