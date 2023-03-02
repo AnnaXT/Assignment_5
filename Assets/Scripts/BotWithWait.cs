@@ -8,11 +8,14 @@ public class BotWithWait : MonoBehaviour
     GameObject player;
 
     private bool chase = false;
+    public float interval = 2f;
+    private float waitTime = 2f;
 
     void Start()
     {
         _newNavMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        waitTime = interval;
     }
 
     public void StartChase(){
@@ -27,5 +30,27 @@ public class BotWithWait : MonoBehaviour
         _newNavMeshAgent.destination = player.transform.position;
         yield return new WaitForSeconds(1);
         }
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if (other.CompareTag("Player")){
+            other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            StopCoroutine("ChasePlayer");
+            chase = false;
+            
+        }
+
+    }
+
+    private void Update(){
+        if (chase == false){
+            waitTime -= Time.deltaTime;
+        }
+        if (waitTime <= 0){
+            waitTime = interval;
+            chase = true;
+            StartCoroutine("ChasePlayer");
+        }
+
     }
 }
