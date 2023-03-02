@@ -10,6 +10,7 @@ public class BotWithWait : MonoBehaviour
     private bool chase = false;
     public float interval = 2f;
     private float waitTime = 2f;
+    private bool started = false;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class BotWithWait : MonoBehaviour
 
     public void StartChase(){
         chase = true;
+        started = true;
         StartCoroutine(ChasePlayer());
     }
 
@@ -43,7 +45,7 @@ public class BotWithWait : MonoBehaviour
     }
 
     private void Update(){
-        if (chase == false){
+        if (chase == false && started){
             waitTime -= Time.deltaTime;
         }
         if (waitTime <= 0){
