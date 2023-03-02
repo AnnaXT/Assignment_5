@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 8f298d0fb83d146ea88b7cf488394a0f
   - enabled: 1
-    path: Assets/Scenes/Jack stole Anna Test Scene 1.unity
-    guid: 631d0e103922b450aadc87257a59a785
+    path: Assets/Scenes/Sergey Test.unity
+    guid: cdc336eff5676fa4ca6f09023ef60d21
   m_configObjects: {}

@@ -9,41 +9,41 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
     Animator animator;
 
-    private bool frontView = false;
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
-    private void LateUpdate()
-    {
-        if (!frontView)
-            transform.position = player.transform.position + offset;
-    }
+
+    //private void LateUpdate()
+    //{
+    //    //if (!frontView)
+    //      //transform.position = player.transform.position + offset;
+    //}
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (!frontView) FrontViewAnimation();
-            else TopViewAnimation();
-            frontView = !frontView;
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    if (!frontView) FrontViewAnimation();
+        //    else TopViewAnimation();
+        //    frontView = !frontView;
+        //}
     }
 
-    private void FrontViewAnimation()
+    public void FrontViewAnimation()
     {
-        WaitForPlayerToStop();
+        StartCoroutine(WaitForPlayerToStop());
         _gameManager.SetPlayerControllerActive(false);
         animator.SetBool("FrontView", true);
-        WaitForAnimationToFinish();
+        StartCoroutine(WaitForAnimationToFinish());
+        _gameManager.DirectPlayerTowards(transform);
     }
 
-    private void TopViewAnimation()
+    public void TopViewAnimation()
     {
         animator.SetBool("TopView", true);
-        WaitForAnimationToFinish();
+        StartCoroutine(WaitForAnimationToFinish());
         _gameManager.SetPlayerControllerActive(true);
     }
 
