@@ -19,17 +19,5 @@ public class Door : MonoBehaviour
                 SceneManager.LoadScene(levelToLoad);
             }
         }
-        // {
-        //     if (!locked)
-        //     {
-        //         SceneManager.LoadScene("Level 1");
-        //     }
-
-        //     else if (PublicVars.hasKey)
-        //     {
-        //         PublicVars.hasKey = false;
-        //         SceneManager.LoadScene("Start Menu");
-        //     }
-        // }
     }
 }
