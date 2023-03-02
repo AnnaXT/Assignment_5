@@ -4,16 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 using System;
 
-public class Player : MonoBehaviour
+public class TestPlayer : MonoBehaviour
 {
     NavMeshAgent _newNavMeshAgent;
     Camera mainCam;
-    Animator animator;
 
     void Start()
     {
         _newNavMeshAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
         mainCam = Camera.main;
     }
 
@@ -31,7 +29,6 @@ public class Player : MonoBehaviour
     }
 
 
-
     // private void OnTriggerEnter(Collider other)
     // {
     //    if (other.CompareTag("Key"))
@@ -40,11 +37,7 @@ public class Player : MonoBehaviour
     //        Destroy(other.gameObject);
     //        PublicVars.hasKey[keyNum] = true;
     //    }
-
-    public void AttackAnimation()
-    {
-        animator.SetBool("Attack", true);
-    }
+    // }
 
 }
 
