@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.44671863, g: 0.496575, b: 0.5750147, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,7 +346,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de9818d61287b42eea223daa70d3cb93, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.72
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12184,7 +12184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4282332115090890455, guid: b18db3cdcaadc274daaca8051af5cd1d, type: 3}
       propertyPath: nextScene
-      value: Level 3
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 4282332115090890473, guid: b18db3cdcaadc274daaca8051af5cd1d, type: 3}
       propertyPath: m_Enabled
@@ -13432,6 +13432,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1089633680}
     m_Modifications:
+    - target: {fileID: 4454143536671626018, guid: 7cd6286b0693b4125a38fc5576ffc78f, type: 3}
+      propertyPath: speed
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 8314856684470492136, guid: 7cd6286b0693b4125a38fc5576ffc78f, type: 3}
       propertyPath: m_Name
       value: Enemy Type 2

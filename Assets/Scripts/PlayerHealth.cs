@@ -11,7 +11,8 @@ public class PlayerHealth : MonoBehaviour
     //[SerializeField] 
     //private int score = 0;
 
-    //public TextMeshProUGUI scoreUI;
+    public AudioClip damageSound;
+    AudioSource _audioSource;
     public TextMeshProUGUI livesUI;
     public string levelName = "End Screen";
 
@@ -20,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //scoreUI.text = "SCORE: " + score;
         livesUI.text = lifeVal + " Coins";
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update(){
@@ -38,6 +40,9 @@ public class PlayerHealth : MonoBehaviour
     public void ChangeLifeVal(int newVal){
         lifeVal += newVal;
         livesUI.text = lifeVal + " Coins";
+        if (newVal == -1){
+            _audioSource.PlayOneShot(damageSound);
+        }
     }
 
     public int getLife(){
