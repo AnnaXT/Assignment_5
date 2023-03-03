@@ -13272,7 +13272,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 454513788, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
       propertyPath: OnTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 454513788, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
       propertyPath: OnTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13281,6 +13281,14 @@ PrefabInstance:
     - target: {fileID: 454513788, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
       propertyPath: OnTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartChase
+      objectReference: {fileID: 0}
+    - target: {fileID: 454513788, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
+      propertyPath: OnTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotWithWait, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 454513788, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
+      propertyPath: OnTriggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1195766084531445896, guid: 837dd742890e44819bb09bac9dadd278, type: 3}
       propertyPath: m_Name
