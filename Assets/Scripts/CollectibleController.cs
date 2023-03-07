@@ -27,15 +27,19 @@ public class CollectibleController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioSource.PlayClipAtPoint(coinSound, transform.position, 0.5f);
             _playerController.AttackAnimation();
             if (gameObject.CompareTag("Key"))
+            {
+                AudioSource.PlayClipAtPoint(coinSound, transform.position, 0.5f);
                 _gameManager.SetKeyStatus(true);
+            }
             if (gameObject.CompareTag("StarLife"))
+            {
+                AudioSource.PlayClipAtPoint(coinSound, transform.position, 0.5f);
                 _gameManager.UpdateLives(1);
-            
-            OnCollected?.Invoke();
-            Destroy(gameObject);
+                OnCollected?.Invoke();
+                Destroy(gameObject);
+            }
         }
     }
 }

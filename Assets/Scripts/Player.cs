@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public string nextScene;
 
+
     void Start()
     {
         _newNavMeshAgent = GetComponent<NavMeshAgent>();

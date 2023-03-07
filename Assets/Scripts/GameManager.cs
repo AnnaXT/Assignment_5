@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public Player _playerController;
     public GameObject player;
+    public GameObject key; 
     public CameraController _cameraController;
     private UnityEngine.AI.NavMeshAgent _navMeshAgent;
     public TextMeshProUGUI lifeSpan;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        lifeSpan.text = "Lives: " + lives.ToString();
     }
 
     public void UpdateLives(int lifePoint)
@@ -48,14 +50,17 @@ public class GameManager : MonoBehaviour
     {
         if (newStatus) 
         {
+            key.GetComponent<CollectibleController>().enabled = false;
+            key.GetComponent<FollowPlayer>().enabled = true;
+            key.GetComponent<Collider>().enabled = false;
             keyStatus = true;
-            keyStatusText.text = "Key: Obtained";
+            keyStatusText.text = "Baby: Found!";
         }
     }
 
     public void DisplayKeyNotObtainedError()
     {
-        ShowTextForSeconds(keyStatusMessageText, 2f);
+        StartCoroutine(ShowTextForSeconds(keyStatusMessageText, 2f));
     }
 
     public void StartGame()
