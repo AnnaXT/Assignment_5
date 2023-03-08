@@ -8,7 +8,7 @@ public class L1Main : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("DropBall", 2, 2);
+        InvokeRepeating("DropBall", 2, 3);
     }
 
     void DropBall()
