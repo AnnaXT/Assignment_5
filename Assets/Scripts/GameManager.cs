@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     
             //SceneManager.LoadScene(deathLevelName);
             lives = 1;
-            StartCoroutine(WaitForSceneLoad(deathLevelName, 1));
+            StartCoroutine(WaitForSceneLoad(deathLevelName,0));
         }
     }
 
