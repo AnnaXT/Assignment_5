@@ -18,9 +18,9 @@ public class Trigger : MonoBehaviour
         
         if(other.gameObject.CompareTag(tagName)){
             //other.GetComponent<PlayerHealth>().ChangeLifeVal(1);
-            _gameManager.UpdateLives(1);
+            //_gameManager.UpdateLives(1);
             OnTriggerEnterEvent?.Invoke();
-            Destroy(gameObject);
+            //Destroy(gameObject);
             
         }
     }
