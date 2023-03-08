@@ -6,17 +6,18 @@ public class BotWithoutNavMesh : MonoBehaviour
 {
     Rigidbody _rigidbody;
     private GameObject player;
-    public float speed = 0.002f;
+    public float speed = 0.2f;
 
     private bool chase = true;
     public float interval = 2f;
     private float waitTime = 2f;
+    GameManager _gameManager;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         waitTime = interval;
-        
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class BotWithoutNavMesh : MonoBehaviour
         }
         else{
             transform.LookAt(player.transform);
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
         
         if (waitTime <= 0){
@@ -39,7 +40,8 @@ public class BotWithoutNavMesh : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
-            other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            //other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            _gameManager.UpdateLives(-1);
             chase = false;
             
         }
