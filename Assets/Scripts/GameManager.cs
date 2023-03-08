@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
             // Anna, if you want to edit anything, do it here
     
             //SceneManager.LoadScene(deathLevelName);
+            lives = 1;
             StartCoroutine(WaitForSceneLoad(deathLevelName, 1));
         }
     }
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string nextLevel)
     {
         _cameraController.FrontViewAnimation();
-        StartCoroutine(WaitForSceneLoad(nextLevel, 2));
+        StartCoroutine(WaitForSceneLoad(nextLevel, 0));
     }
 
     private IEnumerator WaitForSceneLoad(string sceneName, int seconds)
