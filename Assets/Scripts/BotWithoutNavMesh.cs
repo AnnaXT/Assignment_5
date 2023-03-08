@@ -11,12 +11,13 @@ public class BotWithoutNavMesh : MonoBehaviour
     private bool chase = true;
     public float interval = 2f;
     private float waitTime = 2f;
+    GameManager _gameManager;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         waitTime = interval;
-        
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -39,7 +40,8 @@ public class BotWithoutNavMesh : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
-            other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            //other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            _gameManager.UpdateLives(-1);
             chase = false;
             
         }

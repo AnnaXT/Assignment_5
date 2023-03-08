@@ -9,6 +9,7 @@ public class Bot : MonoBehaviour
     private bool chase = true;
     public float interval = 2f;
     private float waitTime = 2f;
+    GameManager _gameManager; 
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Bot : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(ChasePlayer());
         waitTime = interval;
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     IEnumerator ChasePlayer()
@@ -29,7 +31,8 @@ public class Bot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player")){
-            other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            //other.GetComponent<PlayerHealth>().ChangeLifeVal(-1);
+            _gameManager.UpdateLives(-1);
             StopCoroutine("ChasePlayer");
             chase = false;
             

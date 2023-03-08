@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] 
-    private int lifeVal = 1;
+    private int lifeVal = 3;
     //[SerializeField] 
     //private int score = 0;
 
@@ -20,13 +20,13 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         //scoreUI.text = "SCORE: " + score;
-        livesUI.text = lifeVal + " Coins";
+        livesUI.text = "Lives: " + lifeVal;
         _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update(){
         //scoreUI.text = "SCORE: " + score;
-        livesUI.text = lifeVal + " Coins";
+        livesUI.text = "Lives: " + lifeVal;
         if (lifeVal <=0 ){
             SceneManager.LoadScene(levelName);
         }
