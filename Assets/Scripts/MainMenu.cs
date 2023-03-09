@@ -7,6 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame() 
     {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void PlayGameWithoutTutorial(){
         SceneManager.LoadScene("level 4");
     }
 

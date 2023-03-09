@@ -9,14 +9,20 @@ public class GameManager : MonoBehaviour
 {
     public Player _playerController;
     public GameObject player;
+    public GameObject key;
     public CameraController _cameraController;
     private UnityEngine.AI.NavMeshAgent _navMeshAgent;
     public TextMeshProUGUI lifeSpan;
     public TextMeshProUGUI keyStatusText;
     public TextMeshProUGUI keyStatusMessageText;
+    // Replacing player health script for Anna
+    public string deathLevelName = "Death Scene";
+    public AudioClip damageSound;
+
+
 
     public bool keyStatus = false;
-    public int lives;
+    public static int lives = 1;
     private void Awake()
     {
         var gms = GameObject.FindObjectsOfType<GameManager>();
@@ -33,29 +39,42 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        lifeSpan.text = "Lives: " + lives.ToString();
     }
 
     public void UpdateLives(int lifePoint)
     {
-        if (lives > 0)
+        lives += lifePoint;
+        lifeSpan.text = "Lives: " + lives.ToString();
+        if (lifePoint < 0)
         {
-            lives += lifePoint;
-            lifeSpan.text = "Lives: " + lives.ToString();
+            player.GetComponent<AudioSource>().PlayOneShot(damageSound);
+        }
+        if (lives <= 0)
+        {
+            // Anna, if you want to edit anything, do it here
+    
+            //SceneManager.LoadScene(deathLevelName);
+            lives = 1;
+            StartCoroutine(WaitForSceneLoad(deathLevelName,0));
         }
     }
 
     public void SetKeyStatus(bool newStatus)
     {
-        if (newStatus) 
+        if (newStatus)
         {
+            key.GetComponent<CollectibleController>().enabled = false;
+            key.GetComponent<FollowTarget>().enabled = true;
+            key.GetComponent<Collider>().enabled = false;
             keyStatus = true;
-            keyStatusText.text = "Key: Obtained";
+            keyStatusText.text = "Baby: Found!";
         }
     }
 
     public void DisplayKeyNotObtainedError()
     {
-        ShowTextForSeconds(keyStatusMessageText, 2f);
+        StartCoroutine(ShowTextForSeconds(keyStatusMessageText, 2f));
     }
 
     public void StartGame()
@@ -84,12 +103,12 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string nextLevel)
     {
         _cameraController.FrontViewAnimation();
-        StartCoroutine(WaitForSceneLoad(nextLevel));
+        StartCoroutine(WaitForSceneLoad(nextLevel, 0));
     }
 
-    private IEnumerator WaitForSceneLoad(string sceneName)
+    private IEnumerator WaitForSceneLoad(string sceneName, int seconds)
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene(sceneName);
     }
 
