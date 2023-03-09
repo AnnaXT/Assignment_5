@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 4282332115090890473}
   - component: {fileID: 8797251249143157433}
   - component: {fileID: 8632676126400919411}
+  - component: {fileID: 332983819947091078}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -859,6 +860,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!122 &332983819947091078
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282332115090890474}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278682010
+  m_Size: 1.2
 --- !u!1 &4282332115164755503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1024,6 @@ MonoBehaviour:
   deathLevelName: Death Scene
   damageSound: {fileID: 0}
   keyStatus: 0
-  lives: 3
 --- !u!1 &4282332115308920880
 GameObject:
   m_ObjectHideFlags: 0

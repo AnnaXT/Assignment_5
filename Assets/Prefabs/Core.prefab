@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 2679107600897865308}
   - component: {fileID: 7229932249232685580}
   - component: {fileID: 7606176556543811526}
+  - component: {fileID: 5097154042534725219}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -627,6 +628,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!122 &5097154042534725219
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679107600897865311}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278284413
+  m_Size: 1
 --- !u!1 &2679107600956120730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,6 +1650,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerController: {fileID: 2679107600897865314}
   coinSound: {fileID: 8300000, guid: e7df4984a858f1b4ca677cdbef31071e, type: 3}
+--- !u!122 &2138465456019837830
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4849712541717080075}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4281767580
+  m_Size: 0.6
 --- !u!4 &5189962545556746929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6216532115693788942, guid: d941199d4a58fcb45adc75ea8e37c42c, type: 3}

@@ -441,6 +441,7 @@ GameObject:
   - component: {fileID: 8314856684470492138}
   - component: {fileID: 8314856684470492139}
   - component: {fileID: 4454143536671626018}
+  - component: {fileID: 5589451068632688665}
   m_Layer: 0
   m_Name: Enemy Type 2
   m_TagString: Untagged
@@ -457,7 +458,7 @@ Transform:
   m_GameObject: {fileID: 8314856684470492136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4554772, y: 0.25, z: -5.82518}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8425943965868097344}
@@ -508,6 +509,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   interval: 2
+--- !u!122 &5589451068632688665
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314856684470492136}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4287861651
+  m_Size: 1
 --- !u!1 &8801258877387005116
 GameObject:
   m_ObjectHideFlags: 0

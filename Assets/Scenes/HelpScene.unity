@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44671863, g: 0.496575, b: 0.5750147, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.3, y: 110}
+  m_AnchoredPosition: {x: 23, y: 110}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702630665
@@ -884,7 +884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 18}
+  m_AnchoredPosition: {x: -1, y: 18}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967734453
@@ -909,7 +909,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Left-click your mouse to control the character. \nBe careful of the traps
     and ghosts!\nGet the key and enter the portal to advance to the next level.\nCollect
-    coins to gain more health.\nYour adventure ends when you have no coin."
+    stars to gain more health.\nYour adventure ends when you have no lives."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 485edebb1db4548789c03964dabad6f7, type: 2}
   m_sharedMaterial: {fileID: -2281396968279972606, guid: 485edebb1db4548789c03964dabad6f7, type: 2}
