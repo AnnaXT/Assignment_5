@@ -908,7 +908,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Left-click your mouse to control the character. \nBe careful of the traps
-    and ghosts!\nGet the key and enter the portal to advance to the next level.\nCollect
+    and ghosts!\nGet your baby and enter the portal to advance to the next level.\nCollect
     stars to gain more health.\nYour adventure ends when you have no lives."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 485edebb1db4548789c03964dabad6f7, type: 2}
