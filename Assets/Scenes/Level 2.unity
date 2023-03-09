@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44671863, g: 0.496575, b: 0.5750147, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.2
+    agentRadius: 0.5
     agentHeight: 2
     agentSlope: 60
     agentClimb: 1
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 1
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.06666667
+    cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 96ad470cf101b432ab49ee63b25c50ac, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 39230e2cbafd740788166d5e8754a930, type: 2}
 --- !u!1 &22285621
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &155413111
 Transform:
@@ -8375,7 +8375,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &804351154
 Transform:
@@ -10480,7 +10480,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1270218595
 Transform:
@@ -11828,7 +11828,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1539623766
 Transform:
@@ -12130,8 +12130,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.9716981, g: 0.7196066, b: 0.93872374, a: 1}
+  m_Intensity: 0.9
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -14991,6 +14991,18 @@ MonoBehaviour:
   OnTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!122 &4688807608693782470
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979376341}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4283007367
+  m_Size: 0.7
 --- !u!1001 &4688807609923150347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15268,7 +15280,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278198271
-  m_fontColor: {r: 1, g: 0.12319462, b: 0, a: 1}
+  m_fontColor: {r: 0.78431374, g: 0, b: 0.84313726, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15554,8 +15566,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278788549
-  m_fontColor: {r: 0.7735849, g: 0.12780179, b: 0.034057125, a: 1}
+    rgba: 4292280520
+  m_fontColor: {r: 0.78431374, g: 0, b: 0.84313726, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15758,6 +15770,7 @@ GameObject:
   - component: {fileID: 8825960100750986942}
   - component: {fileID: 4253615535897428718}
   - component: {fileID: 3953193587011413796}
+  - component: {fileID: 8825960100750986943}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15781,6 +15794,18 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: 55cb042f3a0cd4093a5cf8d2ba185383, type: 3}
   livesUI: {fileID: 8825960100716522084}
   levelName: Death Scene
+--- !u!122 &8825960100750986943
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825960100750986941}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4283209882
+  m_Size: 1
 --- !u!1 &8825960100975339678
 GameObject:
   m_ObjectHideFlags: 0
@@ -15930,8 +15955,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278615986
-  m_fontColor: {r: 0.69803923, g: 0.499943, b: 0.023529407, a: 1}
+    rgba: 4292280520
+  m_fontColor: {r: 0.7843138, g: 0, b: 0.8431373, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
