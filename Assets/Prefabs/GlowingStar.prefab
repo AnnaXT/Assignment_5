@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4555761306703174357}
   - component: {fileID: 2952326593101049838}
   - component: {fileID: 2952326593101049834}
-  - component: {fileID: 5644342800820156628}
   m_Layer: 0
   m_Name: GlowingStar
   m_TagString: StarLife
@@ -72,7 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 2
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -113,15 +112,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerController: {fileID: 562330114, guid: 60d18825bb32a42d6ae30b190072854e, type: 3}
   coinSound: {fileID: 8300000, guid: d61bda206a5e96c48a5b889bda98f178, type: 3}
---- !u!122 &5644342800820156628
-Halo:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2610307354191510272}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4282207343
-  m_Size: 1
